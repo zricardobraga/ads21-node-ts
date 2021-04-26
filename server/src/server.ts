@@ -1,9 +1,7 @@
-import { mongoose } from './config/database';
 import express from "express";
-import {Request, Response} from "express"; //as chaves servem para desestruturar o modulo do express para retirar só o que iremos precisar nesse momento. no caso o Request e o Response
 import { router } from "./config/routes"; //importa o router para ser na server.ts ./ pra frente ../ pra trás
+import { mongoose } from './config/database';
 const app = express(); //criação da aplicação
-
 const db = mongoose;  
 
 console.clear();

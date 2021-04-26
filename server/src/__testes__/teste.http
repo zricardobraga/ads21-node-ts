@@ -5,15 +5,47 @@
 GET http://localhost:3000/ciclo/listar
 
 ###
-GET http://localhost:3000/ciclo/listar/:x10/:y20/:z30
+GET http://localhost:3000/ciclo/listar/6087231e6325e8327832ad25
+
+###
+GET http://localhost:3000/ciclo/deletar/6087231e6325e8327832ad25
+
+###
+GET http://localhost:3000/ciclo/deletarVarios
 
 ###
 POST http://localhost:3000/ciclo/cadastrar
 Content-Type: application/json
 
 {
-    "titulo": "Dota 2",
-    "plataforma": "PC",
-    "valor": 50.99,
-    "genero": "Moba"
+    "data": "2021/04/12",
+    "creditos": [       
+        {
+            "nome": "Salário",
+            "valor": 5500
+        },
+        
+        {
+            "nome": "Investimento",
+            "valor": 50
+        }
+
+    ],
+
+    "debitos": [
+        
+        {
+            "nome": "Telefone",
+            "valor": 100,
+            "status": "PENDENTE"
+        },
+        
+        {
+            "nome": "Luz",
+            "valor": 300,
+            "status": "PAGO"
+        }
+
+    ]
 }
+

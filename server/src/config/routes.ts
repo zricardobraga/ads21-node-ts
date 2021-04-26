@@ -1,6 +1,6 @@
-import { Router, Request, Response } from "express"; //router é módulo dentro do express que trata das rotas
+import { Router } from "express"; //router é módulo dentro do express que trata das rotas
 import { CicloController } from "../controllers/CicloController";
-import { } from "./database" 
+// import { } from "./database" 
 
 const router = Router();
 const cicloController = new CicloController(); //intanciando o objeto CicloController
@@ -10,10 +10,14 @@ const cicloController = new CicloController(); //intanciando o objeto CicloContr
 //   });
   
 router.get("/ciclo/listar", cicloController.listar);
+
+router.get("/ciclo/deletarVarios", cicloController.deletarVarios);
   
-router.get("/ciclo/listar/:param1/:param2/:param3", cicloController.buscarPorId);
+router.get("/ciclo/listar/:id", cicloController.buscarPorId);
   
 router.post("/ciclo/cadastrar", cicloController.cadastrar);
+
+router.get("/ciclo/deletar/:id", cicloController.deletarPorId);
 
 export { router };  //exporta o router
 
