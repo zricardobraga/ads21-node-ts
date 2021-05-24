@@ -5,13 +5,47 @@
 GET http://localhost:3000/ciclo/listar
 
 ###
-GET http://localhost:3000/ciclo/listar/6087231e6325e8327832ad25
+GET http://localhost:3000/ciclo/buscarPorId/60ac28b102ee4c2b98840d6c
 
 ###
-GET http://localhost:3000/ciclo/deletar/6087231e6325e8327832ad25
+DELETE http://localhost:3000/ciclo/deletar/60ac28fafe9799382c0057ae
 
 ###
-GET http://localhost:3000/ciclo/deletarVarios
+PUT http://localhost:3000/ciclo/alterar
+Content-Type: application/json
+
+{   
+    "_id": "60ac28b102ee4c2b98840d6c",
+    "data": "2021/04/12",
+    "creditos": [       
+        {
+            "nome": "Salário",
+            "valor": 5500
+        },
+        
+        {
+            "nome": "Investimento",
+            "valor": 50
+        }
+
+    ],
+
+    "debitos": [
+        
+        {
+            "nome": "Tv a cabo",
+            "valor": 150,
+            "status": "PENDENTE"
+        },
+        
+        {
+            "nome": "Internet",
+            "valor": 200,
+            "status": "PAGO"
+        }
+
+    ]
+}
 
 ###
 POST http://localhost:3000/ciclo/cadastrar
